@@ -1,0 +1,26 @@
+# THIS FUNCTION ONLY WORKS ON RESTART!
+# You can use /extrautils reload forcecustomdownload BUT IT MAY CRASH YOUR SERVER!
+custom-download:
+  # Library ini digunakan untuk menggunakan SQLite JDBC Driver pada beberapa plugin untuk membuatnya berjalan, pastikan
+  # versi yang digunakan pada plugin anda dan library ini cocok. atau tambahkan versi lainnya.
+  # https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+  org-xerial-sqlite-jdbc:
+    # Method of reading libraries that have been downloaded
+    # 'class_check' and 'file_check' methods available
+    # class check: uses a more efficient and faster class checking method. You can find class name information from Class.forName("_Take_This_")
+    # file check: uses a file name checking method that is not as efficient and fast as class_check, but is easier to set up. (Use this if you cant find class name)
+    read-method: 'class_check'
+    class-name: 'org.sqlite.JDBC'
+    url: 'https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.46.0.0/sqlite-jdbc-3.46.0.0.jar'
+    file-name: 'sqlite-jdbc-3.46.0.0.jar'
+  # This library is used to use the MySQL JDBC Driver on some plugins to make them run, make sure
+  # the versions used in your plugin and this library match. or add another version.
+  # https://mvnrepository.com/artifact/mysql/mysql-connector-java
+  com-mysql-j:
+    read-method: 'file_check'
+    class-name: 'com.mysql.JDBC.Driver'
+    url: 'https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar'
+    file-name: 'mysql-connector-j-8.4.0.jar'
+  # WARNING!!
+  # If the class-name you enter is incorrect, downloading will occur every time you start the server.
+  # Make sure the class-name you write is valid!

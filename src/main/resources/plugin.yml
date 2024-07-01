@@ -1,0 +1,17 @@
+name: ${project.name}
+main: org.tynes.ExtraUtils
+version: ${project.version}
+api: [ "2.0.0" ]
+author: Foeyii
+loadbefore:
+  - TyneLibF
+commands:
+  extrautils:
+    aliases:
+      - extrautil
+      - ext
+      - exu
+      - exut
+    permission: 'extrautils.commands.main'
+    permission-message: 'You Can''t Use This Command'
+
