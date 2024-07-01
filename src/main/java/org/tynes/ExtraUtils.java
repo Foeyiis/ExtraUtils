@@ -6,6 +6,7 @@ import cn.nukkit.utils.TextFormat;
 import org.tynes.commands.MainCommands;
 import org.tynes.downloader.Downloader;
 import org.tynes.exception.JarFileLoaderException;
+import org.tynes.plugin.PluginController;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,8 +17,12 @@ import java.util.HashMap;
 public class ExtraUtils extends PluginBase {
 
     private static ExtraUtils extraUtils;
-
     private static File libsFolder;
+    private static PluginController pluginController;
+
+    public static PluginController pluginController() {
+        return pluginController;
+    }
 
     public static File libsFolder() {
         return libsFolder;
@@ -36,6 +41,7 @@ public class ExtraUtils extends PluginBase {
         double timesLoad = System.currentTimeMillis();
 
         extraUtils = this;
+        pluginController = new PluginController(getServer().getPluginManager());
 
         libsFolder = new File(getDataFolder().getAbsoluteFile() + "/libraries");
 

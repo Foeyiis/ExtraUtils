@@ -2,6 +2,7 @@ name: ${project.name}
 main: org.tynes.ExtraUtils
 version: ${project.version}
 api: [ "2.0.0" ]
+prefix: 'ExtraUtils'
 author: Foeyii
 loadbefore:
   - TyneLibF
