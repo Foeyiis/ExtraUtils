@@ -123,6 +123,10 @@ public class MainCommands implements CommandExecutor {
         } else {
             commandSender.sendMessage(TextFormat.colorize("&71. &e/ext download <url> <filename>"));
             commandSender.sendMessage(TextFormat.colorize("&72. &e/ext reload"));
+            commandSender.sendMessage(TextFormat.colorize("&73. &e/ext plugin enable <plugin-name> &7(without .jar)"));
+            commandSender.sendMessage(TextFormat.colorize("&74. &e/ext plugin disable <plugin-name> &7(without .jar)"));
+            commandSender.sendMessage(TextFormat.colorize("&74. &e/ext plugin load <file-name> &7(without .jar)"));
+            commandSender.sendMessage(TextFormat.colorize("&74. &e/ext plugin unload <plugin-name> &7(without .jar)"));
         }
         return true;
     }
